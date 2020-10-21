@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:id="@+id/tvEnrollments"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/nav_grey">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Today's Enrollments"
+                                android:textSize="17sp"
+                                android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/tvNdix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvEnrollments"
+                            android:layout_margin="10dp"
+                            android:text="Ndilande"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvNdixStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvNdix"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvNdix"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvLimbe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvNdix"
+                            android:layout_margin="10dp"
+                            android:text="Limbe"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvLimbeStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvLimbe"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvLimbe"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvEnrollTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvLimbe"
+                            android:layout_margin="10dp"
+                            android:text="Total"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvEnrollTotalStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvEnrollTotal"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvEnrollTotal"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+
+                </RelativeLayout>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:id="@+id/tvTodayXray"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/nav_grey">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Today's X-Ray Patients"
+                                android:textSize="17sp"
+                                android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/tvX-rayTb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTodayXray"
+                            android:layout_margin="10dp"
+                            android:text="Day 8"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvXrayStats8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvX-rayTb"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvX-rayTb"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvXray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvX-rayTb"
+                            android:layout_margin="10dp"
+                            android:text="Day 29"
+                            android:tint="@color/colorPrimary"/>
+
+                    <TextView
+                            android:id="@+id/tvXrayStats29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvXray"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvXray"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvTotalXray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvXray"
+                            android:layout_margin="10dp"
+                            android:text="Total"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvTotalXrayStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvTotalXray"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvTotalXray"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+
+                </RelativeLayout>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:id="@+id/tvSputum"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/nav_grey">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Today's Sputum"
+                                android:textSize="17sp"
+                                android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/tvSputumLbl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSputum"
+                            android:layout_margin="10dp"
+                            android:text="Day 8"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvSputumStatsDay8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvSputumLbl"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvSputumLbl"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvSputumLbl2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSputumLbl"
+                            android:layout_margin="10dp"
+                            android:text="Day 29"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvSputumStats29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvSputumLbl2"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvSputumLbl2"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvTotalSputum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSputumLbl2"
+                            android:layout_margin="10dp"
+                            android:text="Total"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvTodaySputumStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvTotalSputum"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvTotalSputum"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:id="@+id/tvTodayHops"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/nav_grey">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Today's Hospitalization"
+                                android:textSize="17sp"
+                                android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/tvTodayHopsDay8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTodayHops"
+                            android:layout_margin="10dp"
+                            android:text="Day 8"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvTodayHopsStats8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvTodayHopsDay8"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvTodayHopsDay8"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvHopsDay29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTodayHopsDay8"
+                            android:layout_margin="10dp"
+                            android:text="Day 29"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvTodayHopsStats29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvHopsDay29"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvHopsDay29"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvHospTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvHopsDay29"
+                            android:layout_margin="10dp"
+                            android:text="Total"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvHospTotalStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvHospTotal"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvHospTotal"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+
+                </RelativeLayout>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:id="@+id/tvTodayDeath"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/nav_grey">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Today's Death"
+                                android:textSize="17sp"
+                                android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/tvTodayDeath8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTodayDeath"
+                            android:layout_margin="10dp"
+                            android:text="Day 8"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvTodayDeathStats8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvTodayDeath8"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvTodayDeath8"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvTodayDeath29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTodayDeath8"
+                            android:layout_margin="10dp"
+                            android:text="Day 29"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvTodayDeathStat29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvTodayDeath29"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvTodayDeath29"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+                    <TextView
+                            android:id="@+id/tvTodayDeathTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTodayDeath29"
+                            android:layout_margin="10dp"
+                            android:text="Total"
+                            android:tint="@color/colorPrimary"/>
+
+
+                    <TextView
+                            android:id="@+id/tvDeathTotalStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tvTodayDeathTotal"
+                            android:layout_marginStart="32dp"
+                            android:layout_toEndOf="@+id/tvTodayDeathTotal"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/black"
+                    />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

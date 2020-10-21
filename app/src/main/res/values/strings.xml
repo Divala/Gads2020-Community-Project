@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ACT-TB Accrual</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="camera_permission">This app needs access to camera so that you are able to capture QR code</string>
+    <string name="lbl_qr_code">Scan the QR Code</string>
+
+</resources>
