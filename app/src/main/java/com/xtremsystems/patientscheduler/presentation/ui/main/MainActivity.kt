@@ -2,15 +2,14 @@ package com.xtremsystems.patientscheduler.presentation.ui.main
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.core.content.ContextCompat
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory.create
 import com.google.android.play.core.install.model.AppUpdateType.IMMEDIATE
 import com.google.android.play.core.install.model.UpdateAvailability
-import com.google.zxing.integration.android.IntentIntegrator
 import com.xtremsystems.patientscheduler.R
 import com.xtremsystems.patientscheduler.data.patients.Patient
 import com.xtremsystems.patientscheduler.helpers.SessionManager
@@ -21,7 +20,6 @@ import com.xtremsystems.patientscheduler.presentation.ui.main.overdue.OverdueFra
 import com.xtremsystems.patientscheduler.presentation.ui.main.reminders.RemindersFragment
 import com.xtremsystems.patientscheduler.presentation.ui.main.settings.SettingsFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_add_patient.*
 
 
 class MainActivity : AppCompatActivity(), MainView {
@@ -128,7 +126,6 @@ class MainActivity : AppCompatActivity(), MainView {
             }
         }
 
-        etPatientId.setText(IntentIntegrator.parseActivityResult(requestCode, resultCode, data).contents)
     }
 
     override fun onBackPressed() {

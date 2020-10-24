@@ -1,0 +1,193 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.xtremsystems.patientscheduler"
+4    android:versionCode="9"
+5    android:versionName="1.0.6" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:6:5-78
+11-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:6:22-76
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:7:5-66
+12-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:7:22-64
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:8:5-65
+13-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:8:22-62
+14
+15    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+16    <uses-feature
+16-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:25:5-27:36
+17        android:name="android.hardware.camera"
+17-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:26:9-47
+18        android:required="false" />
+18-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:27:9-33
+19    <uses-feature
+19-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:28:5-30:36
+20        android:name="android.hardware.camera.front"
+20-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:29:9-53
+21        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+21-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:30:9-33
+22    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+23    <uses-feature
+23-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:33:5-35:36
+24        android:name="android.hardware.camera.autofocus"
+24-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:34:9-57
+25        android:required="false" />
+25-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:35:9-33
+26    <uses-feature
+26-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:36:5-38:36
+27        android:name="android.hardware.camera.flash"
+27-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:37:9-53
+28        android:required="false" />
+28-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:38:9-33
+29    <uses-feature
+29-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:39:5-41:36
+30        android:name="android.hardware.screen.landscape"
+30-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:40:9-57
+31        android:required="false" />
+31-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:41:9-33
+32    <uses-feature
+32-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:42:5-44:36
+33        android:name="android.hardware.wifi"
+33-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:43:9-45
+34        android:required="false" /> <!-- Permission will be merged into the manifest of the hosting app. -->
+34-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:44:9-33
+35    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
+36    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+36-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:8:3-74
+36-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:8:20-72
+37
+38    <application
+38-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:11:5-43:19
+39        android:name="com.xtremsystems.patientscheduler.presentation.PatientScheduler"
+39-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:12:13-91
+40        android:allowBackup="true"
+40-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:13:13-39
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.3.1] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/d1323992cad8176231a767a893692a96/core-1.3.1/AndroidManifest.xml:24:18-86
+42        android:debuggable="true"
+43        android:hardwareAccelerated="true"
+43-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:14:13-47
+44        android:icon="@mipmap/ic_launcher"
+44-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:15:13-47
+45        android:label="@string/app_name"
+45-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:16:13-45
+46        android:roundIcon="@mipmap/ic_launcher_round"
+46-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:17:13-58
+47        android:supportsRtl="true"
+47-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:18:13-39
+48        android:testOnly="true"
+49        android:theme="@style/AppTheme" >
+49-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:19:13-44
+50        <activity
+50-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:21:9-23:20
+51            android:name="com.xtremsystems.patientscheduler.presentation.ui.main.stats.SummaryStatsActivity"
+51-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:21:19-115
+52            android:label="Today&apos;s Stats" >
+52-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:22:19-40
+53        </activity>
+54        <activity android:name="com.xtremsystems.patientscheduler.presentation.ui.main.records.second_visit.SecondVisitRecordsActivity" >
+54-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:24:9-25:20
+54-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:24:19-103
+55        </activity>
+56        <activity android:name="com.xtremsystems.patientscheduler.presentation.ui.main.records.first_visit.FirstVisitRecordsActivity" >
+56-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:26:9-27:20
+56-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:26:19-101
+57        </activity>
+58        <activity android:name="com.xtremsystems.patientscheduler.presentation.ui.login.LoginActivity" >
+58-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:28:9-29:20
+58-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:28:19-103
+59        </activity>
+60        <activity
+60-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:30:9-38:20
+61            android:name="com.xtremsystems.patientscheduler.presentation.ui.main.MainActivity"
+61-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:31:17-99
+62            android:screenOrientation="portrait" >
+62-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:32:17-53
+63            <intent-filter>
+63-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:33:13-37:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:34:17-68
+64-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:34:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:36:17-76
+66-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:36:27-74
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:39:9-41:50
+70            android:name="com.xtremsystems.patientscheduler.presentation.ui.main.settings.change_password.ChangePasswordActivity"
+70-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:40:17-101
+71            android:label="Change Password" />
+71-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:41:17-48
+72        <activity android:name="com.xtremsystems.patientscheduler.presentation.ui.main.add_patient.BarcodeScannerActivity" />
+72-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:42:9-92
+72-->/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/AndroidManifest.xml:42:19-90
+73        <activity
+73-->[pub.devrel:easypermissions:3.0.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/d977e0b24b7302f2c794385351de72bf/jetified-easypermissions-3.0.0/AndroidManifest.xml:12:9-16:66
+74            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+74-->[pub.devrel:easypermissions:3.0.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/d977e0b24b7302f2c794385351de72bf/jetified-easypermissions-3.0.0/AndroidManifest.xml:13:13-86
+75            android:exported="false"
+75-->[pub.devrel:easypermissions:3.0.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/d977e0b24b7302f2c794385351de72bf/jetified-easypermissions-3.0.0/AndroidManifest.xml:14:13-37
+76            android:label=""
+76-->[pub.devrel:easypermissions:3.0.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/d977e0b24b7302f2c794385351de72bf/jetified-easypermissions-3.0.0/AndroidManifest.xml:15:13-29
+77            android:theme="@style/EasyPermissions.Transparent" />
+77-->[pub.devrel:easypermissions:3.0.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/d977e0b24b7302f2c794385351de72bf/jetified-easypermissions-3.0.0/AndroidManifest.xml:16:13-63
+78        <activity
+78-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:47:9-53:63
+79            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+79-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:48:13-74
+80            android:clearTaskOnLaunch="true"
+80-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:49:13-45
+81            android:screenOrientation="sensorLandscape"
+81-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:50:13-56
+82            android:stateNotNeeded="true"
+82-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:51:13-42
+83            android:theme="@style/zxing_CaptureTheme"
+83-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:52:13-54
+84            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+84-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/7ef2a2220062c4000745d424f516c339/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:53:13-60
+85        <activity
+85-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:12:5-271
+86            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
+86-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:12:15-102
+87            android:enabled="false"
+87-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:12:103-126
+88            android:exported="false"
+88-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:12:127-151
+89            android:launchMode="singleInstance"
+89-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:12:204-239
+90            android:process=":playcore_missing_splits_activity"
+90-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:12:152-203
+91            android:stateNotNeeded="true" />
+91-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:12:240-269
+92        <activity
+92-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:13:5-226
+93            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+93-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:13:15-95
+94            android:enabled="false"
+94-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:13:96-119
+95            android:exported="false"
+95-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:13:120-144
+96            android:stateNotNeeded="true"
+96-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:13:145-174
+97            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The service will be merged into the manifest of the hosting app. -->
+97-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:13:175-224
+98        <service
+98-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:16:5-145
+99            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
+99-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:16:14-95
+100            android:enabled="false"
+100-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:16:96-119
+101            android:exported="true" />
+101-->[com.google.android.play:core:1.8.2] /Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/a4f027b79953af5f618aa86dd5d513af/jetified-core-1.8.2/AndroidManifest.xml:16:120-143
+102    </application>
+103
+104</manifest>
