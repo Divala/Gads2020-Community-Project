@@ -36,7 +36,7 @@ class AddPatientFragment : Fragment(), AddPatientView {
         super.onActivityCreated(savedInstanceState)
 
         btnAdd.setOnClickListener {
-            dialog = SpotsDialog.Builder().setContext(context).setMessage("Logging in...").build()
+            dialog = SpotsDialog.Builder().setContext(context).setMessage("Adding patient...").build()
                 .apply { show() }
 
             addPatient()

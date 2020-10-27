@@ -44,12 +44,12 @@
         "source": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/res/layout/fragment_overdue_visit.xml"
     },
     {
-        "merged": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/res/merged/debug/drawable_ic_absent.png.flat",
-        "source": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/res/drawable/ic_absent.png"
-    },
-    {
         "merged": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/res/merged/debug/drawable_ic_user_circle_solid.xml.flat",
         "source": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/res/drawable/ic_user_circle_solid.xml"
+    },
+    {
+        "merged": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/res/merged/debug/drawable_ic_absent.png.flat",
+        "source": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/res/drawable/ic_absent.png"
     },
     {
         "merged": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/res/merged/debug/layout_fragment_all_patients.xml.flat",
         "source": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/res/layout/fragment_all_patients.xml"
+    },
+    {
+        "merged": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/res/merged/debug/xml_network_security_config.xml.flat",
+        "source": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/src/main/res/xml/network_security_config.xml"
     },
     {
         "merged": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/res/merged/debug/drawable_ic_reminders_black_24dp.xml.flat",

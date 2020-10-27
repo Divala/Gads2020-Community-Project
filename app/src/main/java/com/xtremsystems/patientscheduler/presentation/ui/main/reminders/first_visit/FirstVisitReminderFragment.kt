@@ -2,48 +2,51 @@ package com.xtremsystems.patientscheduler.presentation.ui.main.reminders.first_v
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.ItemTouchHelper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.xtremsystems.patientscheduler.R
 import com.xtremsystems.patientscheduler.data.patients.Data
 import com.xtremsystems.patientscheduler.helpers.AppPrefKeys
 import com.xtremsystems.patientscheduler.presentation.PatientScheduler
 import com.xtremsystems.patientscheduler.presentation.adapters.recyclerview.FirstVisitAdapter
 import com.xtremsystems.patientscheduler.presentation.adapters.recyclerview.SwipeToDeleteCallback
+import kotlinx.android.synthetic.main.fragment_visit_reminders.*
 
 class FirstVisitReminderFragment : Fragment(), FirstVisitRemindersView,
     SwipeToDeleteCallback.RecyclerItemTouchHelperListener {
     private lateinit var presenter: FirstVisitRemindersPresenter
-    private lateinit var tvNoPatients: TextView
-    private lateinit var rvPatients: RecyclerView
-    private lateinit var swipeRefresh: SwipeRefreshLayout
+
     private lateinit var patients: List<Data>
     private lateinit var adapter: FirstVisitAdapter
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view: View = inflater.inflate(R.layout.fragment_visit_reminders, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
-        presenter = FirstVisitRemindersPresenter(this.context!!, this, PatientScheduler.service!!)
 
-        tvNoPatients = view.findViewById(R.id.tvNoPatients)
-        rvPatients = view.findViewById(R.id.rvPatients)
-        swipeRefresh = view.findViewById(R.id.swipeRefresh)
+        return inflater.inflate(R.layout.fragment_visit_reminders, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         swipeRefresh.setOnRefreshListener { getPatients() }
         swipeRefresh.setColorSchemeResources(R.color.colorPrimary)
 
+        presenter = FirstVisitRemindersPresenter(this.context!!, this, PatientScheduler.service!!)
+
         getPatients()
 
-        return view
+
     }
 
     override fun getAccessToken(): String {
@@ -75,7 +78,8 @@ class FirstVisitReminderFragment : Fragment(), FirstVisitRemindersView,
 
             patients = data
 
-            val itemTouchHelper = context?.let { SwipeToDeleteCallback(it, this) }?.let { ItemTouchHelper(it) }
+            val itemTouchHelper =
+                context?.let { SwipeToDeleteCallback(it, this) }?.let { ItemTouchHelper(it) }
             itemTouchHelper?.attachToRecyclerView(rvPatients)
         }
     }

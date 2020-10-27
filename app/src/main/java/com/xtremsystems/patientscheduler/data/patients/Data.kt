@@ -7,7 +7,7 @@ class Data {
     @SerializedName("id")
     @Expose
     var id: Int? = null
-    @SerializedName("patient_id")
+    @SerializedName("patient_name")
     @Expose
     var patientId: String? = null
     @SerializedName("status")

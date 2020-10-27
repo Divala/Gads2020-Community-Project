@@ -2,13 +2,12 @@ package com.xtremsystems.patientscheduler.presentation.ui.main.overdue.second_vi
 
 import android.app.AlertDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.xtremsystems.patientscheduler.R
 import com.xtremsystems.patientscheduler.data.patients.Data
 import com.xtremsystems.patientscheduler.helpers.AppPrefKeys
@@ -16,10 +15,8 @@ import com.xtremsystems.patientscheduler.presentation.PatientScheduler
 import com.xtremsystems.patientscheduler.presentation.adapters.recyclerview.OverdueSecondVisitAdapter
 import kotlinx.android.synthetic.main.fragment_overdue_visit.*
 
-
 class OverdueSecondVisitFragment : Fragment(), OverdueSecondVisitView {
     private lateinit var presenter: OverdueSecondVisitPresenter
-    private lateinit var swipeRefresh: SwipeRefreshLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,15 +24,20 @@ class OverdueSecondVisitFragment : Fragment(), OverdueSecondVisitView {
     ): View? {
 
         val view: View = inflater.inflate(R.layout.fragment_overdue_visit, container, false)
+
+
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         presenter = OverdueSecondVisitPresenter(this.context!!, this, PatientScheduler.service!!)
 
-        swipeRefresh = view.findViewById(R.id.swipeRefresh)
         swipeRefresh.setOnRefreshListener { getPatients() }
         swipeRefresh.setColorSchemeResources(R.color.colorPrimary)
 
         getPatients()
-
-        return view
     }
 
     override fun getAccessToken(): String {

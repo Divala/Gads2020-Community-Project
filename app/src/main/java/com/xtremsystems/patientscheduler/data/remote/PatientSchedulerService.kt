@@ -54,7 +54,7 @@ interface PatientSchedulerService {
     @FormUrlEncoded
     @POST("patients/add")
     @Headers("key:" + AppConfig.APP_SECRET)
-    fun addPatient(@Header("Authorization") token: String, @Field("patient_id") patientId: String, @Field("location") location: String): Call<AddPatientResponse>
+    fun addPatient(@Header("Authorization") token: String, @Field("patient_name") patientId: String, @Field("location") location: String): Call<AddPatientResponse>
 
 
     @GET("patients/all")
