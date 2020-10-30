@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/mathewsdivala/Projects/xtrem/GADS2020 Community Project/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-sw720dp-v13/values-sw720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/mathewsdivala/.gradle/caches/transforms-2/files-2.1/16ef593d1a68c3baf1c19da69808af83/jetified-core-3.3.0/res/values-sw720dp-v13/values-sw720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "51",
+                        "endOffsets": "102"
+                    }
+                }
+            ]
+        }
+    ]
+}

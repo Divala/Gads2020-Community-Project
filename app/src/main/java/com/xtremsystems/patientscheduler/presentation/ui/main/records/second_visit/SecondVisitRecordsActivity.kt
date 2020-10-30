@@ -42,7 +42,7 @@ class SecondVisitRecordsActivity : AppCompatActivity(), SecondVisitRecordsView {
                 AlertDialog.Builder(this)
                     .setTitle("Confirm Action")
                     .setMessage("Are you sure about the results?")
-                    .setPositiveButton("Yes") { _, _ -> postData() }
+                    .setPositiveButton("Yes") { _, _ -> postData(intent.getStringExtra("PATIENT_NAME")) }
                     .setNegativeButton("No") { dialogInterface, _ -> dialogInterface.cancel() }
                     .show()
             }
@@ -56,10 +56,10 @@ class SecondVisitRecordsActivity : AppCompatActivity(), SecondVisitRecordsView {
 
     }
 
-    private fun postData() {
+    private fun postData(patientName: String?) {
         dialog = SpotsDialog.Builder().setContext(this).setMessage("Saving results...").build().apply { show() }
 
-        presenter.postData(intent.getIntExtra("PATIENT_ID", 0))
+        patientName?.let { presenter.postData(it) }
     }
 
     override fun getAccessToken(): String {

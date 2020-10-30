@@ -71,7 +71,7 @@ interface PatientSchedulerService {
     @Headers("key:" + AppConfig.APP_SECRET)
     fun postFirstVisitRecords(
         @Header("Authorization") token: String,
-        @Field("id") patient_id: Int,
+        @Field("patient_name") patientName: String,
         @Field("tb_by_x-ray") xray: String,
         @Field("tb_by_sputum") sputum: String,
         @Field("death") death: String,
@@ -85,7 +85,7 @@ interface PatientSchedulerService {
     @Headers("key:" + AppConfig.APP_SECRET)
     fun postSecondVisitRecords(
         @Header("Authorization") token: String,
-        @Field("id") patient_id: Int,
+        @Field("patient_name") patientName: String,
         @Field("tb_by_x-ray") xray: String,
         @Field("tb_by_sputum") sputum: String,
         @Field("death") death: String,

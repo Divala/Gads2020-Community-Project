@@ -21,7 +21,7 @@ class SecondVisitRecordsPresenter(
         return "Bearer " + view.getAccessToken()
     }
 
-    fun postData(patient_id: Int) {
+    fun postData(patientName: String) {
         val xray: String = view.getXray()
         val sputum: String = view.getSputum()
         val death: String = view.getDeath()
@@ -30,7 +30,7 @@ class SecondVisitRecordsPresenter(
         val non: String = view.getNonOfTheAbove()
 
 
-        service.postSecondVisitRecords(getToken(), patient_id, xray, sputum, death, hosp, loss, non)
+        service.postSecondVisitRecords(getToken(), patientName, xray, sputum, death, hosp, loss, non)
             .enqueue(
                 FirstVisitRecordsCallback(
                     context,

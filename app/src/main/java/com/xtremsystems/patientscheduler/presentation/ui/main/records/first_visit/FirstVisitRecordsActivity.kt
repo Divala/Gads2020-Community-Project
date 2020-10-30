@@ -7,7 +7,6 @@ import androidx.core.content.ContextCompat
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import android.util.Log
 import android.view.MenuItem
 import com.xtremsystems.patientscheduler.R
 import com.xtremsystems.patientscheduler.helpers.AppPrefKeys
@@ -42,7 +41,7 @@ class FirstVisitRecordsActivity : AppCompatActivity(),
             AlertDialog.Builder(this)
                 .setTitle("Confirm Action")
                 .setMessage("Are you sure about the results?")
-                .setPositiveButton("Yes") { _, _ -> postData() }
+                .setPositiveButton("Yes") { _, _ -> postData(intent.getStringExtra("PATIENT_NAME")) }
                 .setNegativeButton("No") { dialogInterface, _ -> dialogInterface.cancel() }
                 .show()
         }
@@ -55,10 +54,10 @@ class FirstVisitRecordsActivity : AppCompatActivity(),
 
     }
 
-    private fun postData() {
+    private fun postData(patientName: String?) {
         dialog = SpotsDialog.Builder().setContext(this).setMessage("Saving results...").build().apply { show() }
 
-        presenter.postData(intent.getIntExtra("PATIENT_ID", 0))
+        patientName?.let { presenter.postData(it) }
     }
 
     override fun getAccessToken(): String {
